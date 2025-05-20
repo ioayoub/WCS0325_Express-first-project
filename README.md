@@ -67,7 +67,7 @@ Vous devriez voir le message `SServer is running on 3310 🚀` dans le terminal.
 
 ## Étape 6 : Créer une route dans le fichier principal
 
-- Dans `app.js`, ajoutez une route simple pour tester le serveur. Ajoutez ce code avant `app.listen` :
+- Dans `index.js`, ajoutez une route simple pour tester le serveur. Ajoutez ce code avant `app.listen` :
 
 ```js
 app.get(’/’, (req, res) => {
@@ -77,9 +77,9 @@ app.get(’/’, (req, res) => {
 });
 ```
 
-- Redémarrez le serveur avec `node app.js`, puis ouvrez votre client HTTP (Postman, Insomnia...) à l’adresse `http://localhost:3000`. Vous devriez voir le message affiché.
+- Redémarrez le serveur avec `node index.js`, puis ouvrez votre client HTTP (Postman, Insomnia...) à l’adresse `http://localhost:3000`. Vous devriez voir le message affiché.
 
-- Redémarrez le serveur avec `node app.js`, puis ouvrez votre navigateur à l’adresse `http://localhost:3000`. Vous devriez voir le message affiché.
+- Redémarrez le serveur avec `node index.js`, puis ouvrez votre navigateur à l’adresse `http://localhost:3000`. Vous devriez voir le message affiché.
 
 ## Étape 7 : Déplacer la route dans un fichier `router.js`
 
@@ -128,7 +128,7 @@ Assurez-vous que la ligne `app.listen` utilise bien `port` comme variable.
 - Relancez le serveur avec :
 
 ```bash
-node app.js
+node index.js
 ```
 
 Vérifiez que le serveur fonctionne toujours sur `http://localhost:3310`.
@@ -179,7 +179,7 @@ Cela définit un routeur modulaire pour gérer les routes.
 
 ## Étape 10 : Importer et utiliser le routeur dans `index.js`
 
-- Dans `app.js`, supprimez la définition de la route et remplacez-la par l’importation du routeur. Modifiez `index.js` comme suit :
+- Dans `index.js`, supprimez la définition de la route et remplacez-la par l’importation du routeur. Modifiez `index.js` comme suit :
 
 ```js
 const express = require(‘express’);
